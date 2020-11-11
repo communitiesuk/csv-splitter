@@ -12,6 +12,10 @@ A simple Python script to split big csv files (or any text files) into smaller o
 
     ```head -10 /path/to/big/csv/file.csv```
 
-3. Run the script, setting the `header_size` and `chunk_size` if necessary (the defaults are one header row and chunks of one million lines), e.g. to split a file ino chunks of one million rows with a three-line header:
+3. Run the script, setting the `header_size` and `chunk_size` if necessary (the defaults are one header row and chunks of one million lines)
 
-    ``` python csv-splitter.py "/path/to/big/csv/file.csv" --header_size=3```
+    ```python csv-splitter.py <filename> [--header_size=<lines>] [--chunk_size=<lines>]```
+
+For example, to split a file into chunks of (the default) one million rows with a three-line header:
+
+```python csv-splitter.py "/path/to/big/csv/file.csv" --header_size=3```
